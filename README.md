@@ -7,6 +7,9 @@
 #include <cmath> //std::pow() for calculatePayment(), std::log() for calculateMonths().
 //-------------------------------------------------------------------------------
 
+//OpenSSF Scorecard
+[![OpenSSF Scorecard](htt‌ps://api.securityscorecards.dev/projects/github.com/{lgauthier1889}/{integration-project}/badge)](htt‌ps://securityscorecards.dev/viewer/?uri=github.com/{owner}/{repo})
+
 // global types and definitions
 //---------------------------------------------------------------------------------
 const float TAX_RATE = 6.5 / 100.0;  //*this math is done by the compiler*
