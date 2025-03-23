@@ -33,6 +33,25 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 ## Installation
 To get started with the project locally:
 
+## Reporting Bugs
+
+If you encounter any bugs or issues with the project, please follow these steps:
+
+1. **Check Existing Issues**:  
+   Before creating a new bug report, check if the issue has already been reported by searching the [Issues tab](https://github.com/lgauthier1889/Integration-project/issues).
+
+2. **Create a New Issue**:  
+   If the bug hasn't been reported, click on the [Issues tab](https://github.com/lgauthier1889/Integration-project/issues) and click **New Issue**.
+   - Provide a **clear title** and description of the bug.
+   - Include steps to **reproduce** the issue.
+   - If possible, include **logs** or **screenshots** to help diagnose the problem.
+
+3. **Label the Issue**:  
+   Use appropriate labels like `bug` to categorize the issue. This helps the maintainers prioritize it.
+
+For reporting bugs or requesting features, visit the [Issues tab](https://github.com/lgauthier1889/Integration-project/issues).
+
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/lgauthier1889/Integration-project.git
