@@ -21,6 +21,9 @@ This project follows OpenSSF Best Practices and aims to improve security in open
 
 ## OpenSSF scorecard badge
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project/badge)](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
+##Actions CI Badge
+[![CI](https://github.com/lgauthier1889/Integration-project/actions/workflows/main.yml/badge.svg)](https://github.com/lgauthier1889/Integration-project/actions/workflows/carSales.cpp)
+
 
 ## Features
 - **Sales Price Calculation**: Calculate taxes, fees, and unpaid balance.
