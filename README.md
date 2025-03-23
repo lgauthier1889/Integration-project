@@ -63,6 +63,17 @@ The primary developers of this project are well-versed in secure software design
 
 Our team regularly reviews the **OWASP Top 10** and other security resources to improve the security of this project.
 
+## Vulnerability Management
+
+We actively monitor for vulnerabilities in our project and dependencies using **GitHub Dependabot**. Any publicly known vulnerabilities of medium or higher severity will be patched within 60 days. Critical vulnerabilities will be fixed as soon as they are reported to us.
+
+### How We Handle Vulnerabilities:
+- We enable **Dependabot alerts** to monitor our dependencies for vulnerabilities.
+- When a **medium or higher severity vulnerability** is identified, we will create a pull request to patch it within 60 days.
+- **Critical vulnerabilities** are fixed as quickly as possible to ensure the security of the software.
+- We regularly check the **GitHub Security Advisories** and **CVE databases** for updates related to our dependencies and code.
+
+For any security-related issues, please contact us directly or use the [Issues tab](https://github.com/lgauthier1889/Integration-project/issues).
 
 1. Clone the repository:
    ```bash
