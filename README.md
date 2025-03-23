@@ -51,21 +51,17 @@ If you encounter any bugs or issues with the project, please follow these steps:
 
 For reporting bugs or requesting features, visit the [Issues tab](https://github.com/lgauthier1889/Integration-project/issues).
 
-## Secure Development
+## Secure Development Knowledge
 
-The primary developers of this project are familiar with secure software design principles. We follow industry best practices for secure coding, including but not limited to:
+The primary developers of this project are well-versed in secure software design. They have experience following secure coding practices, including secure authentication, input validation, and encryption to prevent common security flaws.
 
-- **Input Validation**: Ensuring that all user input is validated to prevent SQL injection, cross-site scripting (XSS), and other injection attacks.
-- **Authentication and Authorization**: Secure handling of user authentication and authorization processes to prevent unauthorized access.
-- **Error Handling**: Avoiding information leakage through error messages and ensuring secure logging.
+### Common Vulnerabilities and Mitigations:
+- **SQL Injection**: Use parameterized queries and ORM tools.
+- **XSS**: Input validation and output encoding are implemented to prevent execution of malicious scripts.
+- **CSRF**: CSRF tokens are utilized to validate requests.
+- **Insecure Deserialization**: Proper validation is performed on serialized data.
 
-Our team has knowledge of the following common vulnerabilities and countermeasures:
-- **SQL Injection**: We use parameterized queries to prevent SQL injection attacks.
-- **Cross-Site Scripting (XSS)**: Input sanitization and proper output encoding are implemented to mitigate XSS risks.
-- **Cross-Site Request Forgery (CSRF)**: CSRF tokens are used to prevent unauthorized actions from being performed.
-
-If you'd like to know more about our secure development practices or specific vulnerabilities we address, feel free to check our development guidelines or contact us.
-
+Our team regularly reviews the **OWASP Top 10** and other security resources to improve the security of this project.
 
 
 1. Clone the repository:
