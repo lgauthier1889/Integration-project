@@ -51,6 +51,22 @@ If you encounter any bugs or issues with the project, please follow these steps:
 
 For reporting bugs or requesting features, visit the [Issues tab](https://github.com/lgauthier1889/Integration-project/issues).
 
+## Secure Development
+
+The primary developers of this project are familiar with secure software design principles. We follow industry best practices for secure coding, including but not limited to:
+
+- **Input Validation**: Ensuring that all user input is validated to prevent SQL injection, cross-site scripting (XSS), and other injection attacks.
+- **Authentication and Authorization**: Secure handling of user authentication and authorization processes to prevent unauthorized access.
+- **Error Handling**: Avoiding information leakage through error messages and ensuring secure logging.
+
+Our team has knowledge of the following common vulnerabilities and countermeasures:
+- **SQL Injection**: We use parameterized queries to prevent SQL injection attacks.
+- **Cross-Site Scripting (XSS)**: Input sanitization and proper output encoding are implemented to mitigate XSS risks.
+- **Cross-Site Request Forgery (CSRF)**: CSRF tokens are used to prevent unauthorized actions from being performed.
+
+If you'd like to know more about our secure development practices or specific vulnerabilities we address, feel free to check our development guidelines or contact us.
+
+
 
 1. Clone the repository:
    ```bash
