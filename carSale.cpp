@@ -5,47 +5,43 @@
 //------------------------------------------------------------------------------
 
 #include <iostream>
-#include <cmath> //std::pow() for calculatePayment(), std::log() for calculateMonths().
-//-------------------------------------------------------------------------------
+#include <cmath>  // std::pow(), std::log(), std::log1p()
 
 // global types and definitions
-//---------------------------------------------------------------------------------
-const float TAX_RATE = 6.5 / 100.0;  //*this math is done by the compiler*
+const float TAX_RATE = 6.5 / 100.0;
 const float TITLE_FEE = 75.25;
 const float TRANSFER_FEE = 7.85;
 const float REGISTRATION_FEE = 14.50;
 
-struct BillOfSales { //*20 bytes of memory (float=4)*
-    float price;                                 //Entered sales price of the car.
-    float discount; //Entered sum of any down payment, trade-in, dealer discounts.
-    float tax;                                      //Calculated sales tax amount.
-    float fees;                   //Sum of Title, Transfer, and Registration fees.
-    float unpaidBalance;                            //Calculated cost of the car.
+struct BillOfSales {
+    float price = 0.0;
+    float discount = 0.0;
+    float tax = 0.0;
+    float fees = 0.0;
+    float unpaidBalance = 0.0;
 };
 
 struct Loan {
-    float principle;      //Amount to finance.
-    float annualRate;     //Annual percentage rate of interest.
-    int months;           //Number of monthly payments.
-    float monthlyPayment; //Monthly payment amount.
-    float interest;       //Total amount of interest paid on the loan.
-    float totalPayments;  //including interest
+    float principle = 0.0;
+    float annualRate = 0.0;
+    int months = 0;
+    float monthlyPayment = 0.0;
+    float interest = 0.0;
+    float totalPayments = 0.0;
 };
 
-struct Contract { //*45 bytes*
-    BillOfSales billOfSale; //A Bill of Sale structure property.
-    bool finance;       //(true: calculate loan, false: paying cash).
-    Loan loan;        //A Loan structure property.
+struct Contract {
+    BillOfSales billOfSale;
+    bool finance = false;
+    Loan loan;
 };
 
-// Function declaration (proto-types)
-// ---------------------------------------------------------------------------------
+// Function prototypes
 BillOfSales getBillOfSales();
 Loan getLoan(float loanAmount);
-void printContract(Contract contract);  // Forward declaration
-
-// Function definitions
-//-----------------------------------------------------------------------------------
+void printContract(const Contract& contract);  // pass by reference
+int calculateMonths(float principle, float annualRate, float monthlyPayment);
+float calculatePayment(float principle, float rate, int months);
 
 int main() {
     char ask;
@@ -55,11 +51,11 @@ int main() {
         Contract contract;
 
         contract.billOfSale = getBillOfSales();
-
         std::cout << "\nThe customer wants a loan? ";
         std::cin >> ask;
         contract.finance = (ask == 'Y' || ask == 'y');
-        if (contract.finance){
+
+        if (contract.finance) {
             contract.loan = getLoan(contract.billOfSale.unpaidBalance);
         }
 
@@ -71,17 +67,31 @@ int main() {
     } while (anotherContract);
 
     return 0;
+}
 
-} // end main
+void printContract(const Contract& contract) {
+    std::cout << "\nSales price: " << contract.billOfSale.price
+              << "\nDiscount: " << contract.billOfSale.discount
+              << "\nTax: " << contract.billOfSale.tax
+              << "\nFees: " << contract.billOfSale.fees
+              << "\n\nUnpaid Balance: " << contract.billOfSale.unpaidBalance;
 
-int calculateMonths(float principle, float annualRate, float monthlyPayment){
+    if (contract.finance) {
+        std::cout << "\nMonths: " << contract.loan.months
+                  << "\nPayment: " << contract.loan.monthlyPayment
+                  << "\nAPR: " << contract.loan.annualRate
+                  << "\nTotal Of Payment: " << contract.loan.totalPayments
+                  << "\nInterest Paid: " << contract.loan.interest
+                  << "\n";
+}
+
+int calculateMonths(float principle, float annualRate, float monthlyPayment) {
     float monthlyRate, mathExpression;
     int numberOfMPeriods;
 
     monthlyRate = annualRate / 12;
-    mathExpression = (monthlyPayment /
-                      (monthlyPayment - monthlyRate * principle));
-    numberOfMPeriods = (std::log(mathExpression)) / (std::log(1 + monthlyRate));
+    mathExpression = (monthlyPayment / (monthlyPayment - monthlyRate * principle));
+    numberOfMPeriods = std::log(mathExpression) / std::log(1 + monthlyRate);
 
     // round up to the nearest whole number
     numberOfMPeriods += 1;
@@ -138,6 +148,7 @@ Loan getLoan(float loanAmount) {
     if (ask == '1') {
         std::cout << "\nNumber of months: ";
         std::cin >> loan.months;
+        loan.totalPayments = loan.months * loan.monthlyPayment;
     } else {
         std::cout << "\nMonthly payment amount: ";
         std::cin >> loan.monthlyPayment;
@@ -150,19 +161,3 @@ Loan getLoan(float loanAmount) {
     return loan;
 }
 
-void printContract(Contract contract) {
-    std::cout << "\nSales price: " << contract.billOfSale.price
-              << "\nDiscount: " << contract.billOfSale.discount
-              << "\nTax: " << contract.billOfSale.tax
-              << "\nFees: " << contract.billOfSale.fees
-              << "\n\nUnpaid Balance: " << contract.billOfSale.unpaidBalance;
-
-    if(contract.finance){
-        std::cout << "\nMonths: " << contract.loan.months
-                  << "\nPayment: " << contract.loan.monthlyPayment
-                  << "\nAPR: " << contract.loan.annualRate
-                  << "\nTotal Of Payment: " << contract.loan.totalPayments
-                  << "\nInterest Paid: " << contract.loan.interest
-                  << "\n";
-    }
-}
