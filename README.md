@@ -19,6 +19,9 @@ This is the main application for a car sales program where users can calculate c
 - **Loan Calculation**: Supports monthly payments and interest calculations.
 - **User Input**: Accepts user input for car price, loan amount, and more.
 
+## Contributing  
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting changes.  
+
 ## Installation
 To get started with the project locally:
 
