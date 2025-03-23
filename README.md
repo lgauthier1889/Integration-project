@@ -9,6 +9,12 @@ This is the main application for a car sales program where users can calculate c
 ![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
 ![Scorecard](https://img.shields.io/github/workflow/status/lgauthier1889/Integration-project/Scorecard)
 
+##demo_badges
+![Static Badge](https://img.shields.io/badge/demo-badge)
+
+![NPM Version](https://img.shields.io/npm/v/version)
+
+
 ## Features
 - **Sales Price Calculation**: Calculate taxes, fees, and unpaid balance.
 - **Loan Calculation**: Supports monthly payments and interest calculations.
