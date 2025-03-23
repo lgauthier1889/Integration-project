@@ -4,6 +4,12 @@ This project is a C++ application designed to calculate the loan functionalities
 ## Description
 This is the main application for a car sales program where users can calculate car payments, manage discounts, and apply loan details. The project includes functions for calculating taxes, fees, and the monthly payment for car loans.
 
+# Integration Project
+
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/10220/badge)](https://bestpractices.coreinfrastructure.org/projects/10220)
+
+This project follows OpenSSF Best Practices and aims to improve security in open-source development.
+
 ## Badges
 ![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
 ![Scorecard](https://img.shields.io/github/workflow/status/lgauthier1889/Integration-project/Scorecard)
