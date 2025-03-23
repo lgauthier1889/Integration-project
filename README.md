@@ -22,6 +22,10 @@ This project follows OpenSSF Best Practices and aims to improve security in open
 ## OpenSSF scorecard badge
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project/badge)](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
 
+## OpenSSF best practices
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/10220/badge)](https://bestpractices.coreinfrastructure.org/projects/10220)
+
+
 ## Actions CI Badge
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project/badge)](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
 
