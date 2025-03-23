@@ -19,6 +19,8 @@ This project follows OpenSSF Best Practices and aims to improve security in open
 
 ![NPM Version](https://img.shields.io/npm/v/version)
 
+## OpenSSF scorecard badge
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project/badge)](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
 
 ## Features
 - **Sales Price Calculation**: Calculate taxes, fees, and unpaid balance.
