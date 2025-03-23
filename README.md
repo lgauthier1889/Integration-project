@@ -1,16 +1,35 @@
+# Integration Project
+
+Welcome to the **Integration Project**! This project involves a car sales program with loan calculation functionality.
+
+## Description
+This is the main application for a car sales program where users can calculate car payments, manage discounts, and apply loan details. The project includes functions for calculating taxes, fees, and the monthly payment for car loans.
+
+## Badges
+![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
+![Scorecard](https://img.shields.io/github/workflow/status/lgauthier1889/Integration-project/Scorecard)
+
+## Features
+- **Sales Price Calculation**: Calculate taxes, fees, and unpaid balance.
+- **Loan Calculation**: Supports monthly payments and interest calculations.
+- **User Input**: Accepts user input for car price, loan amount, and more.
+
+## Installation
+To get started with the project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lgauthier1889/Integration-project.git
+
 // File: carSales.cpp
 // Dev: Lousiane Gauthier
 // Org: FGCU 3003 202308 80602
 // Description: main application file for Car Sales Programming Assignment
-//-------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
 #include <iostream>
 #include <cmath> //std::pow() for calculatePayment(), std::log() for calculateMonths().
 //-------------------------------------------------------------------------------
-
-//OpenSSF Scorecard
-[![OpenSSF Scorecard](htt‌ps://api.securityscorecards.dev/projects/github.com/{lgauthier1889}/{integration-project}/badge)](htt‌ps://securityscorecards.dev/viewer/?uri=github.com/{owner}/{repo})
-
-// OpenSSF Scorecard: [https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
 
 // global types and definitions
 //---------------------------------------------------------------------------------
