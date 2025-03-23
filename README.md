@@ -10,6 +10,8 @@
 //OpenSSF Scorecard
 [![OpenSSF Scorecard](htt‌ps://api.securityscorecards.dev/projects/github.com/{lgauthier1889}/{integration-project}/badge)](htt‌ps://securityscorecards.dev/viewer/?uri=github.com/{owner}/{repo})
 
+// OpenSSF Scorecard: [https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project](https://api.securityscorecards.dev/projects/github.com/lgauthier1889/Integration-project)
+
 // global types and definitions
 //---------------------------------------------------------------------------------
 const float TAX_RATE = 6.5 / 100.0;  //*this math is done by the compiler*
