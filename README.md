@@ -1,6 +1,5 @@
-# Integration Project
-
-Welcome to the **Integration Project**! This project involves a car sales program with loan calculation functionality.
+## Integration Project
+This project is a C++ application designed to calculate the loan functionalities of a car sales program. It helps users by giving them the calculations.
 
 ## Description
 This is the main application for a car sales program where users can calculate car payments, manage discounts, and apply loan details. The project includes functions for calculating taxes, fees, and the monthly payment for car loans.
